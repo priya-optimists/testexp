@@ -1,11 +1,25 @@
+--- 
+artifacts: 
+  files: 
+    - "**/*"
+phases: 
+  build: 
+    commands: 
+      - "echo Build started on `date`"
+      - "echo Compiling the Node.js code"
+      - "mocha test.js"
+  install: 
+    commands: 
+      - "echo Installing Mocha..."
+      - "npm install -g mocha"
+    runtime-versions: 
+      nodejs: 10
+  post_build: 
+    commands: 
+      - "echo Build completed on `date`"
+  pre_build: 
+    commands: 
+      - "echo Installing source NPM dependencies..."
+      - "npm install"
+      - "npm install unit.js"
 version: 0.2
-phases:
-  pre_build:
-    commands:
-      - npm install
-  build:
-    commands:
-      - npm test
-artifacts:
-  files:
-    - '**/*'
