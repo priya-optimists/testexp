@@ -2,6 +2,7 @@
 artifacts: 
   files: 
     - "**/*"
+  name: testexp-build-$(date +%Y-%m-%d)
 phases: 
   build: 
     commands: 
