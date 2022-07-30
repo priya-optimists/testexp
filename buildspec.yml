@@ -2,7 +2,7 @@
 artifacts: 
   files: 
     - "**/*"
-  name: testexp-build-$(date +%Y-%m-%d)
+  name: testexp-build-$(date +%Y-%m-%d)-v$CODEBUILD_BUILD_NUMBER
 phases: 
   build: 
     commands: 
