@@ -3,7 +3,7 @@ const app = express()
 const port = 8080
 
 app.get('/', (req, res) => {
-  res.send('Application is running on ec2 instance now')
+  res.send('Application is running on ec2 instance now - version 1')
 })
 
 app.listen(port, () => {
